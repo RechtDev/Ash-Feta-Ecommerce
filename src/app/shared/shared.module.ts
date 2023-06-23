@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PipesPipe } from './pipes/pipes.pipe';
 import { DummyDirectiveDirective } from './directives/dummy-directive.directive';
+import { ComponentsModule } from './components/components.module';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -11,7 +14,13 @@ import { DummyDirectiveDirective } from './directives/dummy-directive.directive'
     DummyDirectiveDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentsModule
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent
   ]
+
 })
 export class SharedModule { }

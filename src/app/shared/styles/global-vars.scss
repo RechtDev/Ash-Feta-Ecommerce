@@ -1,0 +1,10 @@
+// colors
+$primary-bg-color: #fdf5df;
+$primary-accent: #5ebec4;
+$secondary-accent: #f92c85;
+
+// mixins
+@mixin dev-border($thickness, $style, $color) {
+    border: $thickness $style $color;
+}
+

@@ -1,1 +1,26 @@
-<p>header works!</p>
+<div class="container-fluid col-md-12 row mt-1 header-container">
+    <h1 class="header-logo p-2 col-md-4">Ash'Feta</h1>
+    <div class="nav-container col-md-7 align-self-center d-flex justify-content-between">
+        <nav class="nav-menu d-flex">
+            <div *ngIf="isMobileView">
+                <span class="object-fit-scale">
+                    <mat-icon>menu</mat-icon>
+                </span>
+            </div>
+            <ul *ngIf="!isMobileView" class="d-flex justify-content-around w-100 active-hover">
+                <li>Shop</li>
+                <li>Featured</li>
+                <li>Orders</li>
+                <li>Contact Us!</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="chkout-container col-md-1 align-self-center">
+        <div class="chkout">
+            <span class="d-flex">
+                <mat-icon>shopping_cart</mat-icon>
+                <p class="m-1" [textContent]="shoppingCartCount" *ngIf="shoppingCartCount > 0"></p>
+            </span>
+        </div>
+    </div>   
+</div>
