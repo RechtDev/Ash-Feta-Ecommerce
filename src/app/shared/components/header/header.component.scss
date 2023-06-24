@@ -52,13 +52,11 @@
         order: 2;
     }
 
-    .nav-menu {
-        // display: none !important;
-        order: 1;
-    }
-
     .nav-container {
         width: fit-content;
+        .nav-menu {
+            order: 1;
+        }
     }
 
     .chkout-container {
@@ -73,6 +71,20 @@
         }
         span > p {
             font-size: 1.2em;
+        }
+    }
+
+    #mobileNav {
+        order: 4;
+        ul {
+            list-style: none;
+            font-size: 1.5em;
+            li {
+                width: fit-content;
+                height: 30px;
+                cursor: pointer;
+                margin-bottom:25px;
+            }
         }
     }
 }

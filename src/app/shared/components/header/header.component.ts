@@ -14,12 +14,21 @@ export class HeaderComponent implements OnInit {
   // variables
   shoppingCartCount = 0;
   isMobileView = false;
-
+  displayMobileNav = false;
 
   ngOnInit(): void {
-    this.shoppingCartCount = 20;
+    //
+    this.shoppingCartCount = 50;
     this.globalSvc.isMobile.subscribe(x => {
       this.isMobileView = x;});
+  }
+  
+  toggleMobileNav(): void {
+    if (this.displayMobileNav) {
+      this.displayMobileNav = false;
+    } else {
+      this.displayMobileNav = true;
+    }
   }
 
 }
