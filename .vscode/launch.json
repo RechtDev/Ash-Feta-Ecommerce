@@ -24,11 +24,15 @@
       "url": "http://localhost:4200/",
       "pathMappings": [
         {
-        "url": "http://localhost:4200/",
-        "path": "${workspaceFolder}\\src"
+          "url": "webpack:///src",
+          "path": "${workspaceFolder}/src"
+        },
+        {
+          "url": "http://localhost:4200/",
+          "path": "${workspaceFolder}\\src"
         }
       ],
-      "firefoxExecutable": "C:\\Program Files\\Firefox Developer Edition\\firefox.exe",
+      "firefoxExecutable": "C:\\Program Files\\Firefox Developer Edition\\firefox.exe"
     }
   ]
 }

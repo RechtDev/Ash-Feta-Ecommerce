@@ -1,0 +1,90 @@
+@use '../../styles/global-vars' as *;
+
+.header-container{
+    margin-left: auto;
+    margin-right: auto;
+    //@include dev-border(3px, solid,red);
+}
+
+.header-logo {
+    font-size: 2.5rem;
+}
+
+.nav-menu {
+    width: 100%;
+    ul {
+        height: 0px;
+        list-style: none;
+        font-size: 1.3em;
+        li {
+            cursor: pointer;
+            padding-bottom: 25px;
+        }
+    }
+}
+
+.active-hover > li:hover {
+    border-bottom: 2px solid $primary-accent;
+    
+}
+.chkout {
+    min-width: 1rem;
+    span:hover {
+        cursor: pointer;
+    }
+    span > p {
+        font-size: 1.2em;
+    }
+}
+
+// media queries
+@media only screen 
+  and (max-width: 767px) {
+  /* CSS rules specific to smartphones */
+  .header-container{
+    justify-content: space-between;
+    //@include dev-border(3px, solid,red);
+    }
+
+    .header-logo {
+        font-size: 2.5rem;
+        width: fit-content;
+        order: 2;
+    }
+
+    .nav-container {
+        width: fit-content;
+        .nav-menu {
+            order: 1;
+        }
+    }
+
+    .chkout-container {
+        width: fit-content;
+        order: 3;
+    }
+
+    .chkout {
+        min-width: 3rem;
+        span:hover {
+            cursor: pointer;
+        }
+        span > p {
+            font-size: 1.2em;
+        }
+    }
+
+    #mobileNav {
+        order: 4;
+        ul {
+            list-style: none;
+            font-size: 1.5em;
+            li {
+                width: fit-content;
+                height: 30px;
+                cursor: pointer;
+                margin-bottom:25px;
+            }
+        }
+    }
+}

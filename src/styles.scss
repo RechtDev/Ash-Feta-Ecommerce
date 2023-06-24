@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use './app/shared/styles/global-vars' as *;
+@use '@angular/material/theming' as mat-theme ;
+
+$custom-typography: mat-theme.mat-typography-config(
+  $font-family: 'Julius Sans One'
+);
+
+@include mat-theme.angular-material-typography($custom-typography);
+
 * {margin: 0; padding: 0;}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%; background-color: $primary-bg-color !important;}
+body { margin: 0; }
